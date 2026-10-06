@@ -1,0 +1,4 @@
+squid\io\springbootmaven\entities\Contact.class
+squid\io\springbootmaven\SpringBootMavenApplication.class
+squid\io\springbootmaven\repository\ContactRepository.class
+squid\io\springbootmaven\controller\MainController.class

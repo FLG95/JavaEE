@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Liste des contacts</h1>
+
+<a href="/index">Retour</a>
+
+<div th:if="${#lists.isEmpty(contacts)}">
+    <p>Aucun contact trouvé.</p>
+</div>
+
+<table th:unless="${#lists.isEmpty(contacts)}">
+    <tr>
+        <th>Id</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Note</th>
+    </tr>
+    <tr th:each="contact: ${contacts}">
+        <td th:text="${contact.id}"></td>
+        <td th:text="${contact.name}"></td>
+        <td th:text="${contact.email}"></td>
+        <td th:text="${contact.note}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>
